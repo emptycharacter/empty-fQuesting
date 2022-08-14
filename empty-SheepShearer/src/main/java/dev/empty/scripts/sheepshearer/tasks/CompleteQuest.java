@@ -16,7 +16,7 @@ public class CompleteQuest implements ScriptTask
     @Override
     public boolean validate()
     {
-        return Inventory.contains(ItemID.BALL_OF_WOOL);
+        return Inventory.getFirst(ItemID.BALL_OF_WOOL).getQuantity() == 20;
     }
 
     @Override
