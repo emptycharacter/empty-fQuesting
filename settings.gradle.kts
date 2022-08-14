@@ -1,5 +1,6 @@
 rootProject.name = "empty-fQuesting"
 
+include("e-Utils")
 include("empty-TutorialIsland")
 include("empty-CooksAssistant")
 include("empty-SheepShearer")
