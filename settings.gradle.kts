@@ -1,6 +1,6 @@
 rootProject.name = "empty-fQuesting"
 
-include("empty-PluginUtils")
+include("e-PluginUtils")
 include("empty-TutorialIsland")
 include("empty-CooksAssistant")
 include("empty-SheepShearer")
