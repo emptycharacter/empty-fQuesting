@@ -13,9 +13,9 @@ plugins {
     kotlin("jvm") version "1.6.21"
 }
 
-project.extra["GithubUrl"] = "https://github.com/EmptyCharacter/empty-plugins-release"
+project.extra["GithubUrl"] = "https://github.com/EmptyCharacter/empty-fQuesting-release"
 project.extra["GithubUserName"] = "EmptyCharacter"
-project.extra["GithubRepoName"] = "empty-plugins"
+project.extra["GithubRepoName"] = "empty-fQuesting-release"
 
 apply<BootstrapPlugin>()
 
@@ -23,7 +23,7 @@ allprojects {
     group = "net.unethicalite"
 
     project.extra["PluginProvider"] = "EmptyCharacter"
-    project.extra["ProjectSupportUrl"] = ""
+    project.extra["ProjectSupportUrl"] = "https://discord.gg/sAdb8xb4uB"
     project.extra["PluginLicense"] = "3-Clause BSD License"
 
     apply<JavaPlugin>()

@@ -1,12 +1,12 @@
 package dev.empty.scripts.sheepshearer.tasks;
 
-import net.runelite.api.Item;
-import net.runelite.api.ItemID;
-import net.runelite.api.Player;
+import dev.empty.scripts.sheepshearer.framework.ScriptTask;
+import net.runelite.api.*;
 import net.runelite.api.coords.WorldArea;
 import net.unethicalite.api.entities.Players;
 import net.unethicalite.api.items.Inventory;
 import net.unethicalite.api.movement.Movement;
+import net.unethicalite.api.quests.Quests;
 
 public class CompleteQuest implements ScriptTask
 {
@@ -16,13 +16,14 @@ public class CompleteQuest implements ScriptTask
     @Override
     public boolean validate()
     {
-        return Inventory.getFirst(ItemID.BALL_OF_WOOL).getQuantity() == 20;
+        return Inventory.getFirst(ItemID.BALL_OF_WOOL).getQuantity() == 20 && Quests.getState(Quest.SHEEP_SHEARER) != QuestState.FINISHED;
     }
 
     @Override
     public int execute()
     {
         Player local = Players.getLocal();
+
         Item wool = Inventory.getFirst(ItemID.BALL_OF_WOOL);
         if (wool == null || wool.getQuantity() != 20)
         {

@@ -2,9 +2,10 @@ package dev.empty.scripts.sheepshearer;
 
 import com.google.inject.Inject;
 import com.google.inject.Provides;
+import dev.empty.scripts.sheepshearer.enums.PathType;
 import dev.empty.scripts.sheepshearer.tasks.AttainWool;
 import dev.empty.scripts.sheepshearer.tasks.CompleteQuest;
-import dev.empty.scripts.sheepshearer.tasks.ScriptTask;
+import dev.empty.scripts.sheepshearer.framework.ScriptTask;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.unethicalite.api.plugins.Script;

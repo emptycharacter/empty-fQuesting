@@ -1,4 +1,4 @@
-package dev.empty.scripts.sheepshearer.tasks;
+package dev.empty.scripts.sheepshearer.framework;
 
 public interface ScriptTask
 {
