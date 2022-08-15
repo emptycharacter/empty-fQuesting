@@ -5,6 +5,7 @@ nb-configuration.xml
 project.properties
 *.iml
 .idea/
+.github/
 .project
 .settings/
 .classpath
@@ -25,6 +26,6 @@ replay_pid*
 release
 plugins.json
 test
-.github
+
 
 
