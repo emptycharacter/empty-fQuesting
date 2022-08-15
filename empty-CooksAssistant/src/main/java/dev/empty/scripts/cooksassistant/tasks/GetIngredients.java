@@ -37,6 +37,7 @@ public class GetIngredients implements ScriptTask
         return !Inventory.contains(ItemID.BUCKET_OF_MILK) || !Inventory.contains(ItemID.EGG) || !Inventory.contains(ItemID.POT_OF_FLOUR);
     }
 
+    @SuppressWarnings("checkstyle:RightCurly")
     @Override
     public int execute()
     {
@@ -127,7 +128,8 @@ public class GetIngredients implements ScriptTask
             try
             {
                 Thread.sleep(7000);
-            } catch (InterruptedException e)
+            }
+            catch (InterruptedException e)
             {
                 e.printStackTrace();
             }
