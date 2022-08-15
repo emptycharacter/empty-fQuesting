@@ -31,10 +31,13 @@ public enum QuestStart
 
     private final WorldArea area;
 
-    public WorldArea getArea() { return area; }
-
     QuestStart(WorldArea area)
     {
         this.area = area;
+    }
+
+    public WorldArea getArea()
+    {
+        return area;
     }
 }
