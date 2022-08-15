@@ -6,5 +6,8 @@ public interface ScriptTask
 
     int execute();
 
-    default boolean blocking() { return true; }
+    default boolean blocking()
+    {
+        return true;
+    }
 }

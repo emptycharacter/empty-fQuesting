@@ -19,11 +19,11 @@ public class DragonSlayerOne extends Script
     {
         for (ScriptTask task : TASKS)
         {
-            if(task.validate())
+            if (task.validate())
             {
                 int sleep = task.execute();
 
-                if(task.blocking())
+                if (task.blocking())
                 {
                     return sleep;
                 }

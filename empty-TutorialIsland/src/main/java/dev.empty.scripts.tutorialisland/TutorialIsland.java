@@ -17,7 +17,7 @@ public class TutorialIsland extends Script
     @Override
     protected int loop()
     {
-        for (ScriptTask task: TASKS)
+        for (ScriptTask task : TASKS)
         {
             if (task.validate())
             {

@@ -13,7 +13,7 @@ import net.unethicalite.api.widgets.Dialog;
 public class CompleteQuest implements ScriptTask
 {
 
-    private static final WorldArea CooksQuest = new WorldArea(3207, 3215, 1,1, 0);
+    private static final WorldArea CooksQuest = new WorldArea(3207, 3215, 1, 1, 0);
 
 
     @Override
@@ -49,13 +49,13 @@ public class CompleteQuest implements ScriptTask
 
         //starts quest
         Dialog.invokeDialog(DialogOption.NPC_CONTINUE,
-                            DialogOption.CHAT_OPTION_ONE,
-                            DialogOption.PLAYER_CONTINUE,
-                            DialogOption.NPC_CONTINUE,
-                            DialogOption.NPC_CONTINUE,
-                            DialogOption.CHAT_OPTION_ONE,
-                            DialogOption.PLAYER_CONTINUE
-                            );
+                DialogOption.CHAT_OPTION_ONE,
+                DialogOption.PLAYER_CONTINUE,
+                DialogOption.NPC_CONTINUE,
+                DialogOption.NPC_CONTINUE,
+                DialogOption.CHAT_OPTION_ONE,
+                DialogOption.PLAYER_CONTINUE
+        );
         // then u just continue some dialog then u complete the quest
 
         cook.interact("Talk-to");

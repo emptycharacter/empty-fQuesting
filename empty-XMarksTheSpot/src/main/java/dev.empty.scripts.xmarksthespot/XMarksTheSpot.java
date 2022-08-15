@@ -23,7 +23,7 @@ public class XMarksTheSpot extends Script
             {
                 int sleep = task.execute();
 
-                if(task.blocking())
+                if (task.blocking())
                 {
                     return sleep;
                 }

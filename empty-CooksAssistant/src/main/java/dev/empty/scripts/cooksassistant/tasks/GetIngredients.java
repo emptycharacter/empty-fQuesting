@@ -3,7 +3,6 @@ package dev.empty.scripts.cooksassistant.tasks;
 import net.runelite.api.*;
 import net.runelite.api.coords.WorldArea;
 import net.runelite.api.coords.WorldPoint;
-import net.unethicalite.api.entities.NPCs;
 import net.unethicalite.api.entities.Players;
 import net.unethicalite.api.entities.TileItems;
 import net.unethicalite.api.entities.TileObjects;
@@ -11,27 +10,24 @@ import net.unethicalite.api.items.Bank;
 import net.unethicalite.api.items.Inventory;
 import net.unethicalite.api.movement.Movement;
 import net.unethicalite.api.movement.Reachable;
-import net.unethicalite.api.movement.pathfinder.model.Teleport;
-import net.unethicalite.api.movement.pathfinder.model.TeleportSpell;
 
 public class GetIngredients implements ScriptTask
 {
 
     private static final WorldPoint LumbyBank = new WorldPoint(3208, 3221, 2);
-    private static final WorldArea CowGateArea = new WorldArea(3252, 3266, 1,1, 0);
-    private static final WorldPoint CowGate = new WorldPoint(3252, 3266,0);
+    private static final WorldArea CowGateArea = new WorldArea(3252, 3266, 1, 1, 0);
+    private static final WorldPoint CowGate = new WorldPoint(3252, 3266, 0);
 
-    private static final WorldArea CowPatchArea = new WorldArea(3253, 3272, 1,1, 0);
+    private static final WorldArea CowPatchArea = new WorldArea(3253, 3272, 1, 1, 0);
     private static final WorldPoint CowPatch = new WorldPoint(3253, 3272, 0);
-    private static final WorldArea ChickenPatchArea = new WorldArea(3230, 3298, 1,1,0);
-    private static final WorldArea WheatArea = new WorldArea(3162, 3292, 1,1,0);
-    private static final WorldArea Miller = new WorldArea(3167, 3308, 1,1,2);
-    private static final WorldArea FlourBin = new WorldArea(3165, 3306, 1,1,0);
+    private static final WorldArea ChickenPatchArea = new WorldArea(3230, 3298, 1, 1, 0);
+    private static final WorldArea WheatArea = new WorldArea(3162, 3292, 1, 1, 0);
+    private static final WorldArea Miller = new WorldArea(3167, 3308, 1, 1, 2);
+    private static final WorldArea FlourBin = new WorldArea(3165, 3306, 1, 1, 0);
 
     private boolean wheatPicked = false;
     private boolean hopperFilled = false;
     private boolean leverPulled = false;
-
 
 
     @Override
@@ -110,7 +106,7 @@ public class GetIngredients implements ScriptTask
             return 1000;
         }
 
-        if (!Inventory.contains(ItemID.GRAIN) && wheatPicked ==  false)
+        if (!Inventory.contains(ItemID.GRAIN) && wheatPicked == false)
         {
             TileObject wheat = TileObjects.getNearest("Wheat");
             wheat.interact("Pick");
@@ -158,10 +154,6 @@ public class GetIngredients implements ScriptTask
         wheatPicked = false;
         hopperFilled = false;
         leverPulled = false;
-
-
-
-
 
 
         return 1000;

@@ -13,6 +13,7 @@ public class WitchsPotion extends Script
     private static final ScriptTask[] TASKS = new ScriptTask[] {
             new CompleteQuest()
     };
+
     @Override
     protected int loop()
     {
