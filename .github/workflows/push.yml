@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -29,7 +29,7 @@ jobs:
           cd deploy
           
           git config --global user.email "farin.k.joshua@gmail.com"
-          git config --global user.name "Github Actions"
+          git config --global user.name "EmptyCharacter"
           git add -A
           git commit -m 'Plugins auto release'
           git push https://EmptyCharacter@github.com/EmptyCharacter/empty-fQuesting-release.git master
