@@ -1,4 +1,4 @@
-package dev.empty.pluginutils.bank;
+package dev.empty.pluginutils.model;
 
 import net.runelite.api.coords.WorldArea;
 
