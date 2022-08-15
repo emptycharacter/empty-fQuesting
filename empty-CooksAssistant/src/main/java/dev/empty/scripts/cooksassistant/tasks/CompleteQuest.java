@@ -27,7 +27,7 @@ public class CompleteQuest implements ScriptTask
     public int execute()
     {
         Player local = Players.getLocal();
-        //test
+        //tests
         if (Movement.isWalking())
         {
             return 1000;
