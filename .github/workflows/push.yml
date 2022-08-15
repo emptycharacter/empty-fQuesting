@@ -19,8 +19,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Gradle Build
-        run: GITHUB_TOKEN=${{ secrets.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
-}} ./gradlew clean build bootstrapPlugins
+        run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} ./gradlew clean build bootstrapPlugins
 
       - name: Push to release branch
         run: |
@@ -33,4 +32,4 @@ jobs:
           git config --global user.name "EmptyCharacter"
           git add -A
           git commit -m 'Plugins auto release'
-          git push https://EmptyCharacter:${{ secrets.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 }}@github.com/EmptyCharacter/empty-fQuesting-release.git master
+          git push https://EmptyCharacter:${{ secrets.REPO_PAT }}@github.com/EmptyCharacter/empty-fQuesting-release.git master
