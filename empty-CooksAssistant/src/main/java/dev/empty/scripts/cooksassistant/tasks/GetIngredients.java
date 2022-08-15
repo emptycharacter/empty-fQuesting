@@ -112,7 +112,7 @@ public class GetIngredients implements ScriptTask
             TileObject wheat = TileObjects.getNearest("Wheat");
             wheat.interact("Pick");
             wheatPicked = true;
-            return 20000;
+            return 2000;
         }
 
         if (!Miller.contains(local) && Inventory.contains(ItemID.GRAIN) && hopperFilled == false)
