@@ -1,4 +1,4 @@
-package dev.empty.scripts.sheepshearer;
+package dev.empty.scripts.sheepshearer.enums;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

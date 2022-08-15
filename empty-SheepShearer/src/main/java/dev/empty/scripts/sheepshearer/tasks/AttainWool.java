@@ -1,14 +1,23 @@
 package dev.empty.scripts.sheepshearer.tasks;
 
+import dev.empty.pluginutils.bank.Banks;
+import com.google.inject.Inject;
+import dev.empty.scripts.sheepshearer.SheepShearerConfig;
+import dev.empty.scripts.sheepshearer.enums.PathType;
 import net.runelite.api.Item;
 import net.runelite.api.ItemID;
+import net.runelite.api.Player;
+import net.unethicalite.api.entities.Players;
 import net.unethicalite.api.items.Bank;
 import net.unethicalite.api.items.GrandExchange;
 import net.unethicalite.api.items.Inventory;
+import net.unethicalite.api.movement.Movement;
 
 
-public class BuyItems implements ScriptTask
+public class AttainWool implements ScriptTask
 {
+    @Inject
+    private SheepShearerConfig config;
 
     @Override
     public boolean validate()
@@ -19,6 +28,19 @@ public class BuyItems implements ScriptTask
     @Override
     public int execute()
     {
+
+
+        Player local = Players.getLocal();
+
+        if (config.pathType() == PathType.BUY)
+        {
+            if (!Banks.GrandExchangeBank.contains(local))
+            {
+                Movement.walkTo(Banks.GrandExchangeBank);
+                return 1000;
+            }
+        }
+
         if (!Bank.isOpen() && !Inventory.contains(ItemID.COINS_995))
         {
             Item wool = Bank.getFirst(ItemID.BALL_OF_WOOL);

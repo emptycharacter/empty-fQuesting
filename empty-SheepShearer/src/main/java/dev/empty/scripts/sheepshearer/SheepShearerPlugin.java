@@ -2,7 +2,7 @@ package dev.empty.scripts.sheepshearer;
 
 import com.google.inject.Inject;
 import com.google.inject.Provides;
-import dev.empty.scripts.sheepshearer.tasks.BuyItems;
+import dev.empty.scripts.sheepshearer.tasks.AttainWool;
 import dev.empty.scripts.sheepshearer.tasks.CompleteQuest;
 import dev.empty.scripts.sheepshearer.tasks.ScriptTask;
 import net.runelite.client.config.ConfigManager;
@@ -19,7 +19,7 @@ public class SheepShearerPlugin extends Script
     private SheepShearerConfig config;
 
     private static final ScriptTask[] TASKS = new ScriptTask[] {
-            new BuyItems(),
+            new AttainWool(),
             new CompleteQuest(),
     };
 

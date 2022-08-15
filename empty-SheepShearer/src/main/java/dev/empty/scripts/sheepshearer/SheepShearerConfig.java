@@ -1,5 +1,6 @@
 package dev.empty.scripts.sheepshearer;
 
+import dev.empty.scripts.sheepshearer.enums.PathType;
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
