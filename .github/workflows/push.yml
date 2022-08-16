@@ -32,4 +32,4 @@ jobs:
           git config --global user.name "Github Actions"
           git add -A
           git commit -m 'Plugins auto release'
-          git push git@github.com:EmptyCharacter/empty-fQuesting-release.git master
+          git push git@github.com:EmptyCharacter/empty-fQuesting-release.git main
