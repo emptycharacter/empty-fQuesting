@@ -23,7 +23,7 @@ jobs:
 
       - name: Push to release branch
         run: |
-          git clone git@github.com:EmptyCharacter/empty-fQuesting-release.git deploy
+          git clone https://github.com/EmptyCharacter/empty-fQuesting-release.git deploy
           cp -r ./release/. ./deploy
           cp plugins.json deploy
           cd deploy
