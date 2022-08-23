@@ -32,4 +32,4 @@ jobs:
           git config --global user.name "EmptyCharacter"
           git add -A
           git commit -m 'Plugins auto releasesss'
-          git push git@github.com:EmptyCharacter/empty-fQuesting-release.git master
+          git push git@github.com:EmptyCharacter/empty-fQuesting-release.git
