@@ -1,11 +1,7 @@
 package dev.empty.scripts.sheepshearer;
 
-import com.google.inject.Inject;
-import com.google.inject.Provides;
 import dev.empty.scripts.sheepshearer.framework.ScriptTask;
-import dev.empty.scripts.sheepshearer.tasks.AttainWool;
-import dev.empty.scripts.sheepshearer.tasks.CompleteQuest;
-import net.runelite.client.config.ConfigManager;
+import dev.empty.scripts.sheepshearer.tasks.*;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.unethicalite.api.plugins.Script;
 import org.pf4j.Extension;
@@ -16,11 +12,14 @@ public class SheepShearerPlugin extends Script
 {
 
     private static final ScriptTask[] TASKS = new ScriptTask[] {
-            new AttainWool(),
+            new TraverseGE(),
+            new WithdrawGold(),
+            new BuyWool(),
+            new BankItems(),
+            new WithdrawWool(),
+            new TraverseQuestStart(),
             new CompleteQuest(),
     };
-    @Inject
-    private SheepShearerConfig config;
 
     @Override
     public void onStart(String... args)
@@ -43,10 +42,5 @@ public class SheepShearerPlugin extends Script
         return 1000;
     }
 
-    @Provides
-    SheepShearerConfig provideConfig(ConfigManager configManager)
-    {
-        return configManager.getConfig(SheepShearerConfig.class);
-    }
 
 }

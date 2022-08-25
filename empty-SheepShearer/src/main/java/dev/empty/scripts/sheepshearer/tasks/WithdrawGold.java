@@ -4,26 +4,32 @@ import dev.empty.scripts.sheepshearer.framework.ScriptTask;
 import net.runelite.api.ItemID;
 import net.runelite.api.Quest;
 import net.runelite.api.QuestState;
+import net.unethicalite.api.items.Bank;
 import net.unethicalite.api.items.GrandExchange;
+import net.unethicalite.api.items.Inventory;
 import net.unethicalite.api.quests.Quests;
 
-
-public class BuyWool implements ScriptTask
+public class WithdrawGold implements ScriptTask
 {
-
     @Override
     public boolean validate()
     {
-        return Quests.getState(Quest.SHEEP_SHEARER) != QuestState.FINISHED;
+        return !Inventory.contains(ItemID.COINS_995) && Quests.getState(Quest.SHEEP_SHEARER) != QuestState.FINISHED;
     }
 
     @Override
     public int execute()
     {
-        GrandExchange.buy(ItemID.BALL_OF_WOOL, 20, GrandExchange.getPrice());
+
+        if (!Bank.isOpen())
+        {
+            GrandExchange.openBank();
+            return 1000;
+        }
+
+        Bank.withdraw(ItemID.COINS_995, 5000, Bank.WithdrawMode.ITEM);
 
         return 3000;
     }
-
 
 }
