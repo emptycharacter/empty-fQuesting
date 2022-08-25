@@ -1,6 +1,7 @@
 package dev.empty.scripts.sheepshearer.tasks;
 
 import dev.empty.scripts.sheepshearer.framework.ScriptTask;
+import net.runelite.api.Item;
 import net.runelite.api.ItemID;
 import net.runelite.api.Quest;
 import net.runelite.api.QuestState;
@@ -14,7 +15,7 @@ public class WithdrawGold implements ScriptTask
     @Override
     public boolean validate()
     {
-        return !Inventory.contains(ItemID.COINS_995) && Quests.getState(Quest.SHEEP_SHEARER) != QuestState.FINISHED;
+        return !Inventory.contains(ItemID.COINS_995) && !Inventory.contains(ItemID.BALL_OF_WOOL) && Quests.getState(Quest.SHEEP_SHEARER) != QuestState.FINISHED;
     }
 
     @Override
@@ -24,7 +25,7 @@ public class WithdrawGold implements ScriptTask
         if (!Bank.isOpen())
         {
             GrandExchange.openBank();
-            return 1000;
+            return 3000;
         }
 
         Bank.withdraw(ItemID.COINS_995, 5000, Bank.WithdrawMode.ITEM);

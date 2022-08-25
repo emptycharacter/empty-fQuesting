@@ -1,12 +1,12 @@
 package dev.empty.scripts.sheepshearer.tasks;
 
-import dev.empty.pluginutils.model.Banks;
 import dev.empty.scripts.sheepshearer.framework.ScriptTask;
 import net.runelite.api.Player;
 import net.runelite.api.Quest;
 import net.runelite.api.QuestState;
 import net.unethicalite.api.entities.Players;
 import net.unethicalite.api.movement.Movement;
+import net.unethicalite.api.movement.pathfinder.model.BankLocation;
 import net.unethicalite.api.quests.Quests;
 
 public class TraverseGE implements ScriptTask
@@ -24,9 +24,9 @@ public class TraverseGE implements ScriptTask
 
         Player local = Players.getLocal();
 
-        if (!Banks.GrandExchangeBank.contains(local))
+        if (!BankLocation.GRAND_EXCHANGE_BANK.getArea().contains(local))
         {
-            Movement.walkTo(Banks.GrandExchangeBank);
+            Movement.walkTo(BankLocation.GRAND_EXCHANGE_BANK.getArea());
             return 1000;
         }
 
