@@ -24,12 +24,6 @@ public class CompleteQuest implements ScriptTask
     {
         Player local = Players.getLocal();
 
-        Item wool = Inventory.getFirst(ItemID.BALL_OF_WOOL);
-        if (wool == null || wool.getQuantity() != 20)
-        {
-            return 1000;
-        }
-
         if (!questStart.contains(local))
         {
             Movement.walkTo(questStart);

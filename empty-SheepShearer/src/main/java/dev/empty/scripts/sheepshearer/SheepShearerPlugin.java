@@ -12,7 +12,7 @@ public class SheepShearerPlugin extends Script
 {
 
     private static final ScriptTask[] TASKS = new ScriptTask[] {
-
+            new BuyWool(),
             new CompleteQuest(),
     };
 
