@@ -12,13 +12,8 @@ public class SheepShearerPlugin extends Script
 {
 
     private static final ScriptTask[] TASKS = new ScriptTask[] {
-//            new TraverseGE(),
-            new WithdrawGold(),
-            new BuyWool(),
-            new BankItems(),
-            new WithdrawWool(),
-//            new TraverseQuestStart(),
-//            new CompleteQuest(),
+
+            new CompleteQuest(),
     };
 
     @Override
