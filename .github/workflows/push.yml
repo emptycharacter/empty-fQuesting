@@ -31,5 +31,5 @@ jobs:
           git config --global user.email "farin.k.joshua@gmail.com"
           git config --global user.name "EmptyCharacter"
           git add -A
-          git commit -m 'Plugins auto releasesss'
+          git commit -m 'Plugins auto releasess'
           git push https://EmptyCharacter:${{ secrets.REPO_PAT }}@github.com/EmptyCharacter/empty-fQuesting-release.git master
