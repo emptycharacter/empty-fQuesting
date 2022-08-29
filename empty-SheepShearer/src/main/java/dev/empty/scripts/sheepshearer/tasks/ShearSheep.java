@@ -8,7 +8,6 @@ import net.unethicalite.api.entities.NPCs;
 import net.unethicalite.api.entities.Players;
 import net.unethicalite.api.entities.TileObjects;
 import net.unethicalite.api.items.Bank;
-import net.unethicalite.api.items.GrandExchange;
 import net.unethicalite.api.items.Inventory;
 import net.unethicalite.api.movement.Movement;
 import net.unethicalite.api.movement.Reachable;
@@ -81,7 +80,6 @@ public class ShearSheep implements ScriptTask
         {
             TileObject wheel = TileObjects.getNearest("Spinning wheel");
             wheel.interact("Spin");
-            wheel.
             return 1000;
         }
 
