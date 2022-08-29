@@ -23,7 +23,7 @@ jobs:
 
       - name: Push to release branch
         run: |
-          git clone https://github.com/EmptyCharacter/empty-fQuesting-release.git deploy
+          git clone https://github.com/emptycharacter/empty-fQuesting-release.git deploy
           cp -r ./release/. ./deploy
           cp plugins.json deploy
           cd deploy
@@ -32,4 +32,4 @@ jobs:
           git config --global user.name "Github Actions"
           git add -A
           git commit -m 'Plugins auto releasess'
-          git push https://EmptyCharacter:${{ secrets.REPO_PAT }}@github.com/EmptyCharacter/empty-fQuesting-release.git master
+          git push https://emptycharacter:${{ secrets.REPO_PAT }}@github.com/emptycharacter/empty-fQuesting-release.git master
